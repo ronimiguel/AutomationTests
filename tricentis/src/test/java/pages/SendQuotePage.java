@@ -13,6 +13,10 @@ public class SendQuotePage {
 	SendQuoteElements el = new SendQuoteElements();
 	Metodos metodo = new Metodos();
 	
+	/**
+	 * Preenche dados na aba SendQuote 
+	 * @author Roni
+	 */
 	public void SendQuote() {
 		metodo.type(el.getEmail(), "mypersonalmail@gmail.com");		
 		metodo.type(el.getPhone(), "41045350");		

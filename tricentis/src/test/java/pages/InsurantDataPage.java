@@ -12,7 +12,10 @@ import methods.Metodos;
 public class InsurantDataPage {
 	Metodos metodo = new Metodos();
 	InsurantDataElements el = new InsurantDataElements();
-	
+	/**
+	 * Preenche dados na aba insurantData 
+	 * @author Roni
+	 */
 	public void insurantData() {
 		metodo.type(el.getFirstName(), "George");
 		metodo.type(el.getLastName(), "Fritzman");

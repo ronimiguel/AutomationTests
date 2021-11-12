@@ -15,7 +15,12 @@ import org.openqa.selenium.io.FileHandler;
 
 public class ScreenshotEvidencia {
 	Browsers browser = new Browsers();
-
+	/**
+	 * Metodo para tirar Screenshot.
+	 * @param name
+	 * Recebe nome utilizado para salvar arquivo. 
+	 * @author Roni
+	 */
 	public void Screenshot(String name) {
 
 	    TakesScreenshot screenShot = ((TakesScreenshot) Browsers.adriver());

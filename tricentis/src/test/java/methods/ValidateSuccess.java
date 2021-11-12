@@ -11,10 +11,15 @@ import static org.junit.Assert.assertEquals;
 import elements.ValidateSuccessElements;
 
 public class ValidateSuccess {
-	Browsers 				browser		= new Browsers();
-	Metodos 				metodo		= new Metodos();
-	ValidateSuccessElements el 			= new ValidateSuccessElements();
-
+	Browsers browser = new Browsers();
+	Metodos metodo = new Metodos();
+	ValidateSuccessElements el = new ValidateSuccessElements();
+	
+	/**
+	 * Este metodo é utilizado para verificar o sucesso do teste.
+	 * Recebe e compara a mensagem de sucesso.
+	 * @author Roni
+	 */
 	public void success() {
 		// Esperar Mensagem Sending e-mail success! aparecer
 		metodo.waitClickableElement(el.getOkButton(), 10);
@@ -25,9 +30,9 @@ public class ValidateSuccess {
 		assertEquals(textoRecebido, textoSucesso);
 		if (textoRecebido.equalsIgnoreCase(textoSucesso)) {
 			System.out.println("Sucesso ao validar o teste");
-			
-		}else {
-			System.out.println("Teste  ");
+
+		} else {
+			System.out.println("Verificar Teste. Possiveis Falhas");
 		}
 	}
 

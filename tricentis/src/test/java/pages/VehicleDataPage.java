@@ -155,6 +155,13 @@ public class VehicleDataPage {
 		metodo.click(el.getNextenterinsurantdata());
 
 	}
+	
+	/**
+	 * Seleciona quais dados preencher.
+	 * @param Categoria
+	 * Nome do tipo de veiculo 
+	 * @author Roni
+	 */
 	public void vehicleData(String Categoria) {
 		switch (Categoria.toLowerCase()) {
 

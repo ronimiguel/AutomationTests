@@ -10,10 +10,17 @@ import elements.HomeElements;
 import pages.VehicleDataPage;
 
 public class MenuSwitch {
-	HomeElements 	el 		= new HomeElements();
-	Metodos 		metodo 	= new Metodos();
-	VehicleDataPage tipo 	= new VehicleDataPage();
+	HomeElements el = new HomeElements();
+	Metodos metodo = new Metodos();
+	VehicleDataPage tipo = new VehicleDataPage();
 
+	/**
+	 * Este metodo é utilizado para selecionar qual item do menu sera clicado.
+	 * Interage clicando em um elemento
+	 * @param Categoria
+	 * Recebe nome da categoria a ser clicada 
+	 * @author Roni
+	 */
 	public void selectMenuItem(String Categoria) {
 		switch (Categoria.toLowerCase()) {
 

@@ -15,6 +15,10 @@ public class SelectPricePage {
 	Metodos metodo = new Metodos();
 	Browsers browser = new Browsers();
 	
+	/**
+	 * Preenche dados na aba SelectPrice 
+	 * @author Roni
+	 */
 	public void SelectPrice() {
 		metodo.waitClickableElement(el.getSelectSilver(), 5);
 		metodo.click(el.getSelectSilver());
