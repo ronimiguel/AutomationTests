@@ -12,9 +12,9 @@ import java.time.format.DateTimeFormatter;
 public class DateFieldProductData {
 
 	/**
-	 * Este metodo È utilizado para criar uma data futura (2 meses)
+	 * Este metodo √© utilizado para criar uma data futura (2 meses)
 	 * utilizada ao preencher o campo "Start Date" na pagina ProductDataPage 
-	 * de forma autom·tica.
+	 * de forma autom√°tica.
 	 * 
 	 * @author Roni
 	 */
