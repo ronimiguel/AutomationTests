@@ -15,7 +15,7 @@ public class MenuSwitch {
 	VehicleDataPage tipo = new VehicleDataPage();
 
 	/**
-	 * Este metodo é utilizado para selecionar qual item do menu sera clicado.
+	 * Este metodo Ã© utilizado para selecionar qual item do menu sera clicado.
 	 * Interage clicando em um elemento
 	 * @param Categoria
 	 * Recebe nome da categoria a ser clicada 

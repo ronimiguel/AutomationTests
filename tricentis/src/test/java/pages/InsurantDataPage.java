@@ -13,7 +13,7 @@ public class InsurantDataPage {
 	Metodos metodo = new Metodos();
 	InsurantDataElements el = new InsurantDataElements();
 	/**
-	 * Preenche dados na aba insurantData 
+	 * Preenche os dados na aba insurantData 
 	 * @author Roni
 	 */
 	public void insurantData() {

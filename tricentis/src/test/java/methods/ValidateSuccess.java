@@ -16,7 +16,7 @@ public class ValidateSuccess {
 	ValidateSuccessElements el = new ValidateSuccessElements();
 	
 	/**
-	 * Este metodo é utilizado para verificar o sucesso do teste.
+	 * Este metodo Ã© utilizado para verificar o sucesso do teste.
 	 * Recebe e compara a mensagem de sucesso.
 	 * @author Roni
 	 */

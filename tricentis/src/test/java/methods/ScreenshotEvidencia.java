@@ -16,7 +16,7 @@ import org.openqa.selenium.io.FileHandler;
 public class ScreenshotEvidencia {
 	Browsers browser = new Browsers();
 	/**
-	 * Metodo para tirar Screenshot.
+	 * Método para tirar Screenshot.
 	 * @param name
 	 * Recebe nome utilizado para salvar arquivo. 
 	 * @author Roni

@@ -15,7 +15,7 @@ public class Metodos {
 
 	Browsers browser = new Browsers();
 	/**
-	 * Este metodo é utilizado para clicar em um (elemento)
+	 * Este metodo Ã© utilizado para clicar em um (elemento)
 	 * @param clicar
 	 * Interage clicando em um elemento
 	 * @param elemento
@@ -31,7 +31,7 @@ public class Metodos {
 		}
 	}
 	/**
-	 * Este metodo é utilizado para escrever texto
+	 * Este metodo Ã© utilizado para escrever texto
 	 * @param elemento
 	 * Fornecer nome do elemento que recebe o texto
 	 * @param texto
@@ -50,7 +50,7 @@ public class Metodos {
 		
 	}
 	/**
-	 * Este metodo é utilizado para selecionar um elemento em caixas do tipo DropDown
+	 * Este metodo Ã© utilizado para selecionar um elemento em caixas do tipo DropDown
 	 * @param elemento
 	 * Fornecer nome do elemento do tipo DropDown
 	 * @param selecao
@@ -69,7 +69,7 @@ public class Metodos {
 		}
 	}
 	/**
-	 * Este metodo é utilizado para pausar a execucao
+	 * Este metodo Ã© utilizado para pausar a execucao
 	 * @param tempo
 	 * Quantidade de segundos
 	 * @author Roni
