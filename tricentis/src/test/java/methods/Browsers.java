@@ -92,8 +92,8 @@ public class Browsers {
 	
 	
 	/**
-	 * Metodo para trocar/escolher qual browser sera aberto.
-	 * "chrome" ou "firefox"
+	 * Método para trocar/escolher qual browser sera aberto.
+	 * "chrome", "firefox" ou "edge". 
 	 * 	 * 
 	 * @param open Abre o browser.
 	 * @param BrowswerName default "chrome"
