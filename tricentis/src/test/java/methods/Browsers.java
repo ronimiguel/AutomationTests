@@ -15,7 +15,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class Browsers {
-
+	OsChecker check = new OsChecker();
 	private static WebDriver driver;
 
 	public static WebDriver adriver() {
@@ -55,12 +55,25 @@ public class Browsers {
 	 */
 	private void firefox(String url) {
 		try {
-
-			System.setProperty("webdriver.gecko.driver", "./Drivers/geckodriver.exe");
-			FirefoxOptions options = new FirefoxOptions();
-			options.addArguments("start-maximized");
-			driver = new FirefoxDriver(options);
-			driver.get(url);
+				if(check.OsName() == "windows") {
+			
+					System.setProperty("webdriver.gecko.driver", "./Drivers/geckodriver.exe");
+					FirefoxOptions options = new FirefoxOptions();
+					options.addArguments("start-maximized");
+					driver = new FirefoxDriver(options);
+					driver.get(url);
+				
+				}else if (check.OsName() == "linux" ) {
+					
+					System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
+					//Supress log messages
+					System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,"null");
+					FirefoxOptions options = new FirefoxOptions();
+					options.addArguments("--start-maximized");
+					driver = new FirefoxDriver(options);
+					driver.get(url);
+				
+			}
 
 		} catch (Exception e) {
 			System.err.println("--------------- Erro ao abrir navegador --------------- " + e.getMessage());
