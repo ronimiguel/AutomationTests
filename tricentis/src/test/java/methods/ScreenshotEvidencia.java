@@ -26,8 +26,8 @@ public class ScreenshotEvidencia {
 	    TakesScreenshot screenShot = ((TakesScreenshot) Browsers.adriver());
 	    File source = screenShot.getScreenshotAs(OutputType.FILE);
 	    try {
-			FileHandler.copy(source, new File("C://Evidencias/" + name + System.currentTimeMillis() + ".png"));
-			System.out.println("Screenshot capturado e salvo em C:\\Evidencias\\");
+			FileHandler.copy(source, new File("./Evidencias/" + name + System.currentTimeMillis() + ".png"));
+			System.out.println("Screenshot capturado e salvo na pasta ./Evidencias/");
 		} catch (IOException e) {
 			System.err.println("--------------- Erro ao salvar Screenshot --------------- " + e.getMessage());
 			System.err.println("--------------- Causa do erro ---------------" + e.getCause());
