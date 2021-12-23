@@ -31,20 +31,26 @@ public class Browsers {
 	 */
 	private void chrome(String url) {
 		try {
-
-			System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver.exe");
-			ChromeOptions options = new ChromeOptions();
-			options.addArguments("start-maximized");
-			driver = new ChromeDriver(options);
-			driver.get(url);
-
+			if (check.OsName() == "windows") {
+				
+				System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver.exe");
+				ChromeOptions options = new ChromeOptions();
+				options.addArguments("start-maximized");
+				driver = new ChromeDriver(options);
+				driver.get(url);
+			} else if (check.OsName() == "linux") {
+				
+				System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+				ChromeOptions options = new ChromeOptions();
+				options.addArguments("--start-maximized");
+				driver = new ChromeDriver(options);
+				driver.get(url);
+			}
 		} catch (Exception e) {
 			System.err.println("--------------- Erro ao abrir navegador --------------- " + e.getMessage());
 			System.err.println("--------------- Causa do erro ---------------" + e.getCause());
 		}
 	}
-	
-	
 
 	/**
 	 * Metodo para abrir o browser Mozilla Firefox.
@@ -55,24 +61,24 @@ public class Browsers {
 	 */
 	private void firefox(String url) {
 		try {
-				if(check.OsName() == "windows") {
-			
-					System.setProperty("webdriver.gecko.driver", "./Drivers/geckodriver.exe");
-					FirefoxOptions options = new FirefoxOptions();
-					options.addArguments("start-maximized");
-					driver = new FirefoxDriver(options);
-					driver.get(url);
-				
-				}else if (check.OsName() == "linux" ) {
-					
-					System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
-					//Supress log messages
-					System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,"null");
-					FirefoxOptions options = new FirefoxOptions();
-					options.addArguments("--start-maximized");
-					driver = new FirefoxDriver(options);
-					driver.get(url);
-				
+			if (check.OsName() == "windows") {
+
+				System.setProperty("webdriver.gecko.driver", "./Drivers/geckodriver.exe");
+				FirefoxOptions options = new FirefoxOptions();
+				options.addArguments("start-maximized");
+				driver = new FirefoxDriver(options);
+				driver.get(url);
+
+			} else if (check.OsName() == "linux") {
+
+				System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
+				// Supress log messages
+				System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, "null");
+				FirefoxOptions options = new FirefoxOptions();
+				options.addArguments("--start-maximized");
+				driver = new FirefoxDriver(options);
+				driver.get(url);
+
 			}
 
 		} catch (Exception e) {
@@ -80,6 +86,7 @@ public class Browsers {
 			System.err.println("--------------- Causa do erro ---------------" + e.getCause());
 		}
 	}
+
 	/**
 	 * Metodo para abrir o browser Microsoft Edge.
 	 * 
@@ -102,19 +109,17 @@ public class Browsers {
 		}
 	}
 
-	
-	
 	/**
-	 * Método para trocar/escolher qual browser sera aberto.
-	 * "chrome", "firefox" ou "edge". 
-	 * 	 * 
-	 * @param open Abre o browser.
+	 * Método para trocar/escolher qual browser sera aberto. "chrome", "firefox" ou
+	 * "edge". *
+	 * 
+	 * @param open         Abre o browser.
 	 * @param BrowswerName default "chrome"
-	 * @param url URL a ser acessada.
+	 * @param url          URL a ser acessada.
 	 * @author Roni
 	 */
 	public void open(String browserName, String url) {
-				
+
 		switch (browserName.toLowerCase()) {
 		case "chrome":
 			chrome(url);
@@ -123,17 +128,18 @@ public class Browsers {
 		case "firefox":
 			firefox(url);
 			break;
-			
+
 		case "edge":
 			edge(url);
 			break;
-			
+
 		default:
 			chrome(url);
 			break;
 		}
 
 	}
+
 	/**
 	 * Metodo para fechar o browser.
 	 * 
@@ -147,6 +153,5 @@ public class Browsers {
 			System.err.println("--------------- Causa do erro ---------------" + e.getCause());
 		}
 	}
-
 
 }

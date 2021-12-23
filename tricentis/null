@@ -1,0 +1,14 @@
+1640288016835	geckodriver	INFO	Listening on 127.0.0.1:59879
+1640288016866	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--start-maximized" "--remote-debugging-port" "41938" "-no-remote" "-profile" "/tmp/rust_mozprofilejHUJbX"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1640288017559	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilejHUJbX/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:41938/devtools/browser/2627ef83-b8fd-4be5-a4a0-c5529916000f
+1640288018855	Marionette	INFO	Listening on port 43867
+1640288018927	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1640288029372	Marionette	INFO	Stopped listening on port 43867
+1640288029413	geckodriver::marionette	ERROR	Failed to close browser connection: Transport endpoint is not connected (os error 107)
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
